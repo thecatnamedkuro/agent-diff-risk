@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "agent-diff-risk"
+version = "0.1.0"
+description = "Local-first risk scoring for AI coding-agent diffs."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [{ name = "Kuro", email = "thecatnamedkuro@gmail.com" }]
+keywords = ["ai-agents", "code-review", "git", "diff", "ci", "developer-tools"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.urls]
+Homepage = "https://github.com/thecatnamedkuro/agent-diff-risk"
+Repository = "https://github.com/thecatnamedkuro/agent-diff-risk"
+Issues = "https://github.com/thecatnamedkuro/agent-diff-risk/issues"
+
+[project.scripts]
+agent-diff-risk = "agent_diff_risk.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/agent_diff_risk"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

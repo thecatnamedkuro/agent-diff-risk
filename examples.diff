@@ -1,0 +1,8 @@
+diff --git a/src/auth/session.py b/src/auth/session.py
+--- a/src/auth/session.py
++++ b/src/auth/session.py
+@@ -1,2 +1,4 @@
+ def login(user):
++    token = "sk_test_example_not_real_123456789"
++    if user.is_admin: return True
+     return False
