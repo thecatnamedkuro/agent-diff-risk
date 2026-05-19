@@ -60,6 +60,13 @@ Suggested review checklist:
 - Run the affected test suite and a smoke test.
 ```
 
+## Development
+
+```bash
+python -m pip install -e '.[test]'
+pytest
+```
+
 ## GitHub Actions
 
 ```yaml

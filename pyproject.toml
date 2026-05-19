@@ -28,6 +28,9 @@ Issues = "https://github.com/thecatnamedkuro/agent-diff-risk/issues"
 [project.scripts]
 agent-diff-risk = "agent_diff_risk.cli:main"
 
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
 [tool.hatch.build.targets.wheel]
 packages = ["src/agent_diff_risk"]
 
